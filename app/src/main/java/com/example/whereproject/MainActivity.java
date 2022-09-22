@@ -7,13 +7,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    Spinner spinner;;
+    Button btnlogin;
+    Spinner spinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,10 +44,15 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-    }
-    private void login(View view){
-        Intent intent = new Intent(this,App.class);
-        startActivity(intent);
+
+        btnlogin = (Button) findViewById(R.id.btnlogin);
+        btnlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, App.class));
+            }
+        });
+
     }
     
 }
