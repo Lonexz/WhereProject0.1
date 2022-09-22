@@ -25,7 +25,7 @@ public class App extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Snackbar.make(boton, "Enviar Alerta", Snackbar.LENGTH_LONG)
-                        .setAction("ALERTA!", new View.OnClickListener() {
+                        .setAction("ALERTA!!", new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
                                         {
