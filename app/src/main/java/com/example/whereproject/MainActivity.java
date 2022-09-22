@@ -21,13 +21,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         spinner = findViewById(R.id.spinner);
 
-        ArrayList<CodigoInten> marcas = new ArrayList<CodigoInten>();
-        marcas.add(new CodigoInten("+"));
-        marcas.add(new CodigoInten("+569"));
-        marcas.add(new CodigoInten("+562"));
+        ArrayList<CodigoInten> codigo = new ArrayList<CodigoInten>();
+        codigo.add(new CodigoInten("+"));
+        codigo.add(new CodigoInten("+569"));
+        codigo.add(new CodigoInten("+562"));
 
 
-        ArrayAdapter<CodigoInten> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,marcas);
+        ArrayAdapter<CodigoInten> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,codigo);
 
         spinner.setAdapter(adapter);
 
