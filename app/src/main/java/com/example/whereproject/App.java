@@ -1,5 +1,6 @@
 package com.example.whereproject;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Build;
@@ -25,13 +26,12 @@ public class App extends AppCompatActivity {
             public void onClick(View v) {
                 Snackbar.make(boton, "Enviar Alerta", Snackbar.LENGTH_LONG)
                         .setAction("ALERTA!", new View.OnClickListener() {
+                                    @RequiresApi(api = Build.VERSION_CODES.O)
                                     @Override
                                     public void onClick(View v) {
                                         {
                                             final VibrationEffect vibrationEffect1;
-                                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                                                 vibrationEffect1 = VibrationEffect.createOneShot(1000, VibrationEffect.DEFAULT_AMPLITUDE);
-                                            }
                                         }
                                     }
                                 }
