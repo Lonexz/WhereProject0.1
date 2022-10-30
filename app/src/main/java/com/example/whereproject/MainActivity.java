@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     latlang.put("longitud",location.getLongitude());
 
                     mDatabase.child("usuarios").push().setValue(latlang);
+
                 }
             }
         });
